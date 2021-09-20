@@ -72,5 +72,19 @@ public class Reserva implements Serializable{
 	public void setAditional(String aditional) {
 		this.aditional = aditional;
 	}
+	public void print() {
+		print(id+" ");
+		print(fullname+" ");
+		print(email+" ");
+		print(phone+" ");
+		print(date+" ");
+		print(time+" ");
+		print(people+" ");
+		print(aditional+" ");
+		print("\n <EOL>");
+	}
+	private <T> void print(T args){
+		System.out.print(args);
+	}
 	
 }

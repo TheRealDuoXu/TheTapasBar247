@@ -35,4 +35,38 @@ public class PersistenceManager {
 		}
 		return 0;
 	}
+	public List<Reserva> getAll(int action) {
+		//inicializar una factoria para la persistencia, Reservas
+		EntityManagerFactory f = 
+			Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		//toda las transacciones las lleva a cabo un entity manager
+		EntityManager em = f.createEntityManager();
+		
+		//SQL query sentenciaaa
+		String SQL_TODOS = "select t from Reserva";
+		Query q = em.createQuery(SQL_TODOS);
+		
+		//recuperar
+		List<Reserva> agenda = q.getResultList();
+		
+		switch(action) {
+		case 1:
+			for(Reserva entrada:agenda) {
+				entrada.print();
+			}
+		case 0:
+			return agenda;
+		}
+		
+		return null;
+	}
+	
+	public Reserva find(long id) {
+		//inicializar una factoria para la persistencia, Reservas
+			EntityManagerFactory f = 
+				Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		//toda las transacciones las lleva a cabo un entity manager
+		EntityManager em = f.createEntityManager();
+		return em.find(Reserva.class, id);
+	}
 }
