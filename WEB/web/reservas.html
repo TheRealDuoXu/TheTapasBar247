@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Carta Goya tapas bar español">
+    <meta name="author" content="Duo Xu">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+
+    <!-- Webpage Title -->
+    <title>The Tapas Bar 247</title>
+    
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+   <link rel="icon" href="images/LogoColor.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Pavo</a> -->
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/LogoBN.png" alt="alternative"></a> 
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="index.html#header">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="menuENG.html">See in english</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="reservas.html">Reservas</a>
+                    </li>
+                </ul>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+    
+    <!-- Header -->
+    <header class="ex-header bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h1>Realizar una reserva</h1>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </header> <!-- end of ex-header -->
+    <!-- end of header -->
+    <div class="col-lg-12">
+    <div id="formulario" class="testbox">
+        <form name="Reserva" method="post" 
+            action="http://localhost:8080/examples/servlets/servlet/BaseDatos">
+          <div class="banner">
+            <h1>Formulario de reserva de mesa</h1>
+          </div>
+          <div class="item">
+            <p>Razón social*</p>
+            <div class="name-item">
+              <input type="textbox" name="fname" size= "25" value="" placeholder="Nombre" required/>
+              <input type="textbox" name="lname" size= "25" value="" placeholder="Apellidos" />
+            </div>
+          </div>
+          <div class="item">
+            <p>Email</p>
+            <input type="textbox" name="email" size= "50" value="" placeholder="tucorreo@dir.com"/>
+          </div>
+          <div class="item">
+            <p>Teléfono de contacto*</p>
+            <input type="textbox" name="phone" minlength="9" maxlength="13" value="" placeholder="(0034) ### ### ###" required/>
+          </div>
+          <div class="item">
+            <p>Día de la reserva*</p>
+            <input type="date" name="bdate" value="" required/>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+        <div class="item">
+            <p>Hora de la reserva* HH-MM AM/PM</p>
+            <input type="time" name="btime" value="" min="10:00" max="22:00" required/>
+                 </div>
+          <div class="item">
+            <p>Número de personas*</p>
+            <input type="text" name="comensales" required/>
+          </div>
+           <div class="item">
+            <p>Otra información</p>
+            <textarea rows="3" name="extras" value=""></textarea>
+          </div>
+          <div style="white-space:nowrap">
+            <label>
+                He leído y aceptado el <a href="#consentimiento">consentimiento para el tratamiento de mis datos </a><input type="checkbox" value="consentimiento" required>
+            </label>
+        </div>
+           <div class="btn-block">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Basic -->
+    <div id="consentimiento" class="ex-basic-1 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <h2 class="mt-5 mb-3">Consentimiento de tratamiento de datos</h2>
+                    <p class="mb-5">The Tapas Bar 247 es <b>el Responsable</b>  del  tratamiento 
+                        de los datos personales del <b>Interesado</b> y le informa de que estos datos se tratarán de conformidad 
+                        con lo dispuesto en el Reglamento (UE) 2016/679, de 27 de abril (GDPR), y la Ley Orgánica 3/2018, 
+                        de 5 de diciembre (LOPDGDD), por lo que se le facilita la siguiente información del tratamiento: </p>
+                    <h3>Fines y legitimación del tratamiento: </h3>
+                    <p class="mb-5">Mantener una relación profesional (por interés legítimo del 
+                        responsable,  art.  6.1.f  GDPR)  y  envío  de  comunicaciones  de  productos  o  servicios  (con  el 
+                        consentimiento del interesado, art. 6.1.a GDPR).</h3>
+                    <h3>Criterios de conservación de los datos: </h3>
+                    <p class="mb-5">Se conservarán durante no más tiempo del necesario para 
+                        mantener  el  fin  del  tratamiento  o  mientras  existan  prescripciones  legales  que  dictaminen  su 
+                        custodia  y  cuando  ya  no  sea  necesario  para  ello,  se  suprimirán  con  medidas  de  seguridad 
+                        adecuadas para garantizar la anonimización de los datos o la destrucción total de los mismos. </p>
+                    <h3>Comunicación de los datos:</h3>
+                    <p class="mb-5">
+                        No se comunicarán los datos a terceros, salvo obligación legal.
+                    </p>
+
+                    <h2 class="mb-3">Derechos que asisten al Interesado:</h2>
+                    <ul class="list-unstyled li-space-lg mb-4">
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">Derecho a retirar el consentimiento en cualquier momento.</div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">Derecho  de  acceso,  rectificación,  portabilidad  y  supresión  de  sus  datos  y  de  limitación  u 
+                                oposición a su tratamiento. </div>
+                        </li>
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">Derecho a presentar una reclamación ante la Autoridad de control <a href="www.aepd.es">(www.aepd.es)</a> si 
+                                considera que el tratamiento no se ajusta a la normativa vigente.</div>
+                        </li>
+                    </ul>
+                    <div class="text-box mb-5">
+                        <h3>Datos de contacto para ejercer sus derechos:</h3>
+                        <p>El responsable del tratamiento de sus datos The Tapas Bar 247, se localiza en la Calle Goya 82.
+                            Asimismo, puede enviar un correo electrónico a <a href="mailto:amelia@thetapasbar247.com">amelia@thetapasbar247.com</a> 
+                            o a <a href="mailto:duoxu@thetapasbar247.com">duoxu@thetapasbar247.com</a>
+                        </p>
+                    </div> <!-- end of text-box -->
+                    
+                    <h2 class="mb-3">Datos tratados </h2>
+                    <p class="mb-5">El Interesado consiente el tratamiento de sus datos en los términos expuestos:</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Razón social</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Email</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Teléfono</div>
+                            </li>
+                        </ul>
+                    <a class="btn-solid-reg mb-5" href="#formulario">Volver arriba</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4>Para cualquier consulta o reserva puede utilizar nuestro correo electrónico <a class="purple" href="mailto:amelia@thetapasbar247.com">amelia@thetapasbar247.com</a></h4>
+                    <div class="social-container">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of social-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-unstyled li-space-lg p-small">
+                        <li>911 40 65 74 / 615 30 97 73</li>
+                    </ul>
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <p class="p-small statement">Copyright © <a href="#your-link">Duo Xu</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+    	
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
